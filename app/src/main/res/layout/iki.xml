@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+    <LinearLayout
+    android:orientation="vertical"
+    android:layout_height="match_parent"
+    android:layout_width="match_parent"
+    xmlns:android="http://schemas.android.com/apk/res/android">
+
+
+    <LinearLayout
+        android:orientation="vertical"
+        android:layout_height="wrap_content"
+        android:layout_width="match_parent"
+        android:layout_weight="9">
+
+    <TextView
+        android:layout_height="wrap_content"
+        android:layout_width="match_parent"
+        android:text="İlk tarihi seçiniz..."
+        android:textStyle="bold"
+        android:gravity="center"
+        android:paddingTop="10dp"/>
+
+    <DatePicker
+        android:layout_height="wrap_content"
+        android:layout_width="match_parent"
+        android:calendarViewShown="false"
+        android:datePickerMode="spinner"
+        android:id="@+id/dp_ilk"/>
+
+    <TextView
+        android:layout_height="wrap_content"
+        android:layout_width="match_parent"
+        android:text="Son tarihi seçiniz..."
+        android:textStyle="bold"
+        android:gravity="center"/>
+
+    <DatePicker
+        android:layout_height="wrap_content"
+        android:layout_width="match_parent"
+        android:calendarViewShown="false"
+        android:datePickerMode="spinner"
+        android:id="@+id/dp_son"/>
+
+</LinearLayout>
+
+
+    <LinearLayout
+        android:orientation="horizontal"
+        android:layout_height="wrap_content"
+        android:layout_width="match_parent"
+        android:layout_weight="1">
+
+    <Button
+        android:layout_height="wrap_content"
+        android:layout_width="wrap_content"
+        android:layout_weight="1"
+        android:text="Vazgeç"
+        android:id="@+id/vazgec"/>
+
+    <Button
+        android:layout_height="wrap_content"
+        android:layout_width="wrap_content"
+        android:layout_weight="1"
+        android:text="Kaydet"
+        android:id="@+id/kaydet"/>
+
+</LinearLayout>
+
+</LinearLayout>
