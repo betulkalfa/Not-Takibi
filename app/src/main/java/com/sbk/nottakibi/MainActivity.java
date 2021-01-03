@@ -1,4 +1,4 @@
-package com.sbk.firebasenot;
+package com.sbk.nottakibi;
 
 import android.app.AlertDialog;
 import android.app.Dialog;
@@ -26,6 +26,8 @@ import android.widget.Toast;
 
 import androidx.appcompat.app.ActionBar;
 import androidx.appcompat.app.AppCompatActivity;
+
+import com.sbk.nottakibi.R;
 
 import java.text.DateFormat;
 import java.text.ParseException;
@@ -65,12 +67,7 @@ public class MainActivity extends AppCompatActivity {
 
             Toast.makeText(MainActivity.this, "Herhangi bir kayıt bulunamadı.", Toast.LENGTH_SHORT).show();
         }
-
-
     }
-
-
-
 
     @Override
     public boolean onCreateOptionsMenu(Menu menu) {
@@ -211,10 +208,7 @@ public class MainActivity extends AppCompatActivity {
 
                 List<Ogrenci> ogrenciList=new ArrayList<Ogrenci>();
                 ogrenciList=db.IkiTarihArasi(tarih_ilk,tarih_son);
-
-
-
-                /*
+   /*
                  *
                  *
                  * Durum raporu burada oluşturulacak
@@ -412,21 +406,14 @@ public class MainActivity extends AppCompatActivity {
                     return true;
                 }
             });
-
-
-
-
-        }
-
-
-    }
+      }
+ }
     private void paylasMesaj(CharSequence mesaj) {
 
         Intent paylasIntent=new Intent(Intent.ACTION_SEND);
         paylasIntent.setType("text/plain");
         paylasIntent.putExtra(Intent.EXTRA_TEXT,mesaj);
         startActivity(Intent.createChooser(paylasIntent,"Paylaşın!!!"));
-
     }
 
     class MyActionModeCallback implements ActionMode.Callback
@@ -437,7 +424,6 @@ public class MainActivity extends AppCompatActivity {
             mode.getMenuInflater().inflate(R.menu.contex_menu,menu);
             return true;
         }
-
         @Override
         public boolean onPrepareActionMode(ActionMode mode, Menu menu) {
             return false;

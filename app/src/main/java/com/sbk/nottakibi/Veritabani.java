@@ -1,11 +1,10 @@
-package com.sbk.firebasenot;
+package com.sbk.nottakibi;
 
 import android.content.ContentValues;
 import android.content.Context;
 import android.database.Cursor;
 import android.database.sqlite.SQLiteDatabase;
 import android.database.sqlite.SQLiteOpenHelper;
-import android.util.Log;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -58,13 +57,8 @@ public class Veritabani extends SQLiteOpenHelper {
         cv.put(TARIH, ogrenci.getTarih());
 
         long id=db.insert(TABLO_ISMI,null,cv);
-
-
         db.close();
-
         return  id;
-
-
     }
 
     public List<Ogrenci> TumKayitlar() {
@@ -92,15 +86,9 @@ public class Veritabani extends SQLiteOpenHelper {
             ogrenci.setId(c.getLong(idsirano));
 
             ogrenciList.add(ogrenci);
-
-
-
         }
 
         db.close();
-
-
-
         return ogrenciList;
 
     }

@@ -1,4 +1,4 @@
-package com.sbk.firebasenot;
+package com.sbk.nottakibi;
 
 public class Ogrenci {
 
